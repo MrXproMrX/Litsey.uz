@@ -80,3 +80,24 @@ $(function(){
 });
 
 // -------------------------------------
+
+
+
+$(document).ready(function(){
+  $('.academic__item').click(function(){
+     var selector = '.academic__item';
+        $(selector).on('click', function(){
+      $(selector).removeClass('active');
+    this.selector='academic__active'; 
+  $(this).addClass('academic__active');
+
+    $('.academic__button__active').click(function(){
+       $(selector).on('click', function(){
+         $(selector).removeClass('academic__active');
+       this.selector=this.selector;
+    $(this).addClass('academic__active__mrx');
+});
+});
+});
+});
+});

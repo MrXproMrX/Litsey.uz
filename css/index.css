@@ -402,6 +402,107 @@ label {
   font-size: 18px;
   font-weight: 400;
   color: #123654;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.academic__button__active {
+  display: none;
+}
+.academic__active {
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.473) !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 10000 !important;
+}
+.academic__active .academic__text {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: inherit;
+  -webkit-box-orient: vertical;
+  overflow-y: scroll;
+  height: 600px;
+  padding-right: 20px;
+}
+.academic__active .academic__text::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.academic__active .academic__text::-webkit-scrollbar-track {
+  background: #D5D5D5;
+}
+.academic__active .academic__text::-webkit-scrollbar-thumb {
+  background: #123654;
+  height: 10px;
+  border-radius: 50px;
+}
+.academic__active .academic__clikc__active {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  background: #FFFFFF !important;
+  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1) !important;
+  padding: 20px !important;
+  max-width: 100% !important;
+  max-height: 90% !important;
+  width: 90% !important;
+  transform: translate(-50%, -50%) !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
+}
+.academic__active .academic__button__active {
+  display: block !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #123654;
+  background-color: transparent;
+}
+.academic__active .academic__img {
+  display: none !important;
+}
+.academic__active__mrx {
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.academic__active__mrx .academic__clikc__active {
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  transform: translate(0);
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+}
+.academic__active__mrx .academic__button__active {
+  display: none;
+}
+.academic__active__mrx .academic__img {
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -577,7 +678,7 @@ label {
 }
 .foreign__img {
   width: 100%;
-  height: auto;
+  height: 500px;
   margin-bottom: 50px;
 }
 .foreign__img img {
@@ -595,10 +696,32 @@ label {
   margin-top: 20px;
   font-size: 16px;
 }
+.foreign__video iframe {
+  width: 100%;
+  height: 700px;
+  margin-bottom: 30px;
+}
 
 @media (max-width: 1200px) {
   .foreign__img {
     margin-bottom: 20px;
+    height: 400px;
+  }
+  .foreign__video iframe {
+    height: 600px;
+  }
+}
+@media (max-width: 1000px) {
+  .foreign__video iframe {
+    height: 500px;
+  }
+  .foreign__img {
+    height: 300px;
+  }
+}
+@media (max-width: 700px) {
+  .foreign__img {
+    height: auto;
   }
 }
 @media (max-width: 650px) {
@@ -612,6 +735,19 @@ label {
   .foreign__cart .news__item__data {
     margin-top: 15px;
     font-size: 14px;
+  }
+  .foreign__video iframe {
+    height: 350px;
+  }
+}
+@media (max-width: 550px) {
+  .foreign__video iframe {
+    height: 300px;
+  }
+}
+@media (max-width: 450px) {
+  .foreign__video iframe {
+    height: 250px;
   }
 }
 .to_entrants {
@@ -1236,33 +1372,21 @@ header {
   color: #123654;
   line-height: 30px;
   padding-top: 25px;
-}
-.about__item__img__play {
-  font-size: 20px;
-  font-weight: 20px;
-  color: true;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.about__cart__video {
-  width: 600px;
-  height: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  max-height: 340px;
+  -webkit-line-clamp: 14;
+  line-height: 1.4;
   position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
-.about__item__img {
-  width: 100%;
-  height: 100%;
-}
-.about__item__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.about__item iframe {
+  width: 600px;
+  height: 400px;
 }
 
 .statistics {
@@ -1557,6 +1681,14 @@ header {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+.ads__title__h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #880019;
+  padding-left: 30px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
 
 .brand {
   position: relative;
@@ -1725,7 +1857,7 @@ header {
   .ads_xb__list .ads__list {
     margin: 0;
   }
-  .about__cart__video {
+  .about__cart__video iframe {
     width: 500px;
   }
   .news__item {
@@ -1789,7 +1921,7 @@ header {
   .slaeder__list {
     padding-top: 240px;
   }
-  .about__cart__video {
+  .about__cart__video iframe {
     width: 400px;
   }
   .slaeder,
@@ -1840,8 +1972,11 @@ header {
   .about__list {
     flex-direction: column;
   }
-  .about__cart__video {
+  .about__cart__video iframe, .about__item {
     width: 100%;
+  }
+  .about__cart__video iframe {
+    height: 500px;
   }
   .statistics__item {
     flex: 0 0 30%;
@@ -1902,6 +2037,7 @@ header {
 .statistics__title__h4,
 .footer__bottom__link {
     font-size: 14px;
+    max-height: 300px;
   }
   .news__cart__text,
 .ads__item__text {
@@ -1966,6 +2102,9 @@ header {
   }
   .header__cart__menu {
     width: 70%;
+  }
+  .about__cart__video iframe {
+    height: 350px;
   }
 }
 @media (max-width: 650px) {
@@ -2112,6 +2251,7 @@ header {
   }
   .about__text {
     padding-top: 15px;
+    max-height: 290px;
   }
   .news__item__img {
     width: 140px;
@@ -2119,6 +2259,9 @@ header {
   }
   .news__item + .news__item {
     margin-top: 30px;
+  }
+  .about__cart__video iframe {
+    height: 250px;
   }
 }
 @media (max-width: 400px) {
