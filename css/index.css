@@ -1248,9 +1248,9 @@ header {
   width: 100%;
   height: 670px !important;
   position: relative;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 .slaeder__top__slik .slick-dots {
   position: absolute;
@@ -1962,6 +1962,9 @@ header {
     font-size: 26px;
     line-height: 30px;
   }
+  .header__cart__menu__link::after {
+    display: none !important;
+  }
 }
 @media (max-width: 1120px) {
   .ads__item {
@@ -2298,7 +2301,8 @@ header {
   }
   .ads__item__text,
 .ads__item__title__h3,
-.ads__item__title__h4 {
+.ads__item__title__h4,
+.ads__title__h4 {
     padding-left: 20px;
   }
   .statistics__item {
