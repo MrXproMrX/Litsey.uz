@@ -2,11 +2,12 @@
 
 .administration{
     position: relative;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat:no-repeat !important;
+    background-size:cover !important;
+    background-position: center center !important;
     width: 100%;
     height: auto;
-    margin-top: 70px;
+    margin-top: 48px;
     padding-bottom: 55px;
     margin-bottom: 100px;
 
@@ -84,7 +85,7 @@
             -ms-border-radius: 100px;
             -o-border-radius: 100px;
             margin-bottom: 15px;
-            object-position: center center;
+            object-position: top center;
         }
     }
 

@@ -1,0 +1,150 @@
+// ads_xb start
+
+.ads_xb{
+    position: relative;
+    margin-bottom: 100px;
+
+    &__list{
+        margin-top: 40px;
+    }
+}
+
+.ads{
+    &__slider{
+        width: 100%;
+        height: auto;
+        position: relative;
+        max-width: 1020px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 60px;
+
+        .slick-dots{
+            position: absolute;
+            right: 50%;
+            bottom:-30px;
+            display: flex !important;
+            grid-gap: 20px;
+            transform: translate(50%,0);
+            -webkit-transform: translate(50%,0);
+            -moz-transform: translate(50%,0);
+            -ms-transform: translate(50%,0);
+            -o-transform: translate(50%,0);
+
+            .slick-active{
+                background-color:$red;
+            }
+        }
+
+        li{
+            button{
+                font-size: 0;
+            }
+            @extend%transition;
+            width: 16px;
+            cursor: pointer;
+            height: 16px;
+            background-color: rgba(18, 54, 84, 0.4);
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+        }
+    }
+
+    &__img{
+        background-color:$link;
+        padding: 0 60px;
+        @include fiximg(1020px !important, 600px !important,false);
+    }
+
+    &__slider__cart{
+        background-color:#F0F4F7;
+        width: 100%;
+        height: auto;
+    }
+}
+
+// ads_xb end
+
+@media (max-width:1400px){
+    .ads__img{
+        height: 600px !important;
+    }
+}
+
+
+@media (max-width:1150px){
+    .ads__img{
+        height: 500px !important;
+        width: 900px !important;
+    }
+    
+    .ads__slider{
+        max-width: 900px;
+    }
+}
+
+@media (max-width:1000px){
+    .ads__img{
+        height: 450px !important;
+        width: 750px !important;
+        padding: 0 40px;
+    }
+    
+    .ads__slider{
+        max-width: 750px;
+    }
+}
+
+
+@media (max-width:850px){
+    .ads__img{
+        height: 350px !important;
+        width: 650px !important;
+        padding: 0 40px;
+    }
+    
+    .ads__slider{
+        max-width: 650px;
+    }
+}
+
+@media (max-width:750px){
+    .ads__img{
+        height: 300px !important;
+        width: 500px !important;
+        padding: 0 40px;
+    }
+    
+    .ads__slider{
+        max-width: 500px;
+    }
+}
+
+
+@media (max-width:550px){
+    .ads__img{
+        height: 250px !important;
+        width: 390px !important;
+        padding: 0 10px;
+    }
+    
+    .ads__slider{
+        max-width: 390px;
+    }
+}
+
+
+@media (max-width:400px){
+    .ads__img{
+        height: 200px !important;
+        width: 290px !important;
+        padding: 0 10px;
+    }
+    
+    .ads__slider{
+        max-width: 290px;
+    }
+}
