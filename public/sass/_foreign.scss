@@ -10,8 +10,11 @@
     }
 
     &__img{
-        @include fiximg(100%,500px,true);
+        @include fiximg(100%,500px,false);
         margin-bottom: 50px;
+        img{
+            object-position: left top;
+        }
     }
 
     &__text{
