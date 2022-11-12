@@ -14,13 +14,6 @@
     box-sizing: border-box;
 }
 
-
-.clearfix::after {
-    display: block;
-    content: "";
-    clear: both;
-}
-
 a {
     text-decoration: none;
     color: $link;

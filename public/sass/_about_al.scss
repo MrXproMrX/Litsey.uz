@@ -1,20 +1,26 @@
+
 // About AL UWED start
 
 .about_al{
     position: relative;
     margin-bottom: 100px;
 
+    .about__title__h2{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
     &__item{
         float: left;
         margin-right: 60px;
         margin-bottom: 10px;
-    }
 
-    &__img{
-        @include fiximg(320px,385px,true);
-        margin-bottom: 10px;
         img{
+            width: 320px;
+            height: 385px;
+            object-fit: cover;
             object-position: center top;
+            margin-bottom: 10px;
         }
     }
 
@@ -37,6 +43,8 @@
             @include fontAll(42px,700,$text);
             line-height: 150%;
             text-transform: uppercase;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
     }
 
@@ -200,7 +208,6 @@
     }
 }
 
-
 @media (max-width:650px){
     .about_al__text h1, 
     .about_al__text h2, 
@@ -231,8 +238,8 @@
         font-size: 14px;
     }
 
-    .about_al__img {
-        width: auto;
+    .about_al__item img{
+        width: 100%;
         height: auto;
         margin-bottom: 10px;
     }

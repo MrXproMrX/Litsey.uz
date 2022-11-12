@@ -71,7 +71,7 @@
     }
 
     &__img{
-        @include fiximg(180px,180px,true);
+        @include fiximg(180px,180px,false);
         border-radius: 100px;
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
