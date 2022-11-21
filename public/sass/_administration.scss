@@ -71,21 +71,13 @@
     }
 
     &__img{
-        @include fiximg(180px,180px,false);
-        border-radius: 100px;
-        -webkit-border-radius: 100px;
-        -moz-border-radius: 100px;
-        -ms-border-radius: 100px;
-        -o-border-radius: 100px;
+        @include fiximg(180px,180px,true);
         margin-bottom: 15px;
         img{
-            border-radius: 100px;
-            -webkit-border-radius: 100px;
-            -moz-border-radius: 100px;
-            -ms-border-radius: 100px;
-            -o-border-radius: 100px;
-            margin-bottom: 15px;
             object-position: top center;
+            object-fit: cover;
+            max-height: 180px;
+            aspect-ratio: 1;
         }
     }
 
